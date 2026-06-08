@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Más Travel - Norcasia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Caveat:wght@700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        selvaDark: '#0B2F1D',
+                        selvaMedium: '#4A773C',
+                        rioBlue: '#1D5C8A',
+                        sunAccent: '#E5A93B',
+                        waGreen: '#25D366'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Clases personalizadas para aplicar las fuentes de brocha */
+        .font-brocha-fuerte {
+            font-family: 'Permanent Marker', cursive;
+        }
+        .font-brocha-fluida {
+            font-family: 'Caveat', cursive;
+        }
+        
+        @keyframes spin-slow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin-slow 8s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-selvaDark text-gray-100 font-sans antialiased overflow-x-hidden">
+
+<header class="relative w-full h-screen overflow-hidden flex items-center justify-center text-center">
+        <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0 pointer-events-none select-none contrast-110 saturate-125">
+            <source src="assets/fondo.mp4" type="video/mp4">
+        </video>
+        
+        <div class="absolute top-0 left-0 w-full h-full bg-selvaDark/50 bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:4px_4px] z-10 pointer-events-none"></div>
+
+        <div class="absolute top-0 left-0 w-full px-6 pt-6 pb-4 z-30 flex items-center justify-between bg-gradient-to-b from-black/60 to-transparent pointer-events-none">
+            <div class="flex items-center gap-3 pointer-events-auto">
+                <div class="w-20 h-20 rounded-2xl bg-white/95 p-2 flex items-center justify-center shadow-[0_8px_30px_rgb(0,0,0,0.3)] border border-white/20 transform transition-transform duration-300 hover:scale-105 active:scale-95">
+                    <img src="assets/mastravel.png" alt="Más Travel Logo" class="w-full h-full object-contain">
+                </div>
+                <div class="text-left select-none drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                    <span class="block text-white text-sm font-black uppercase tracking-wider leading-none">Más Travel</span>
+                    <span class="text-sunAccent text-[10px] font-extrabold tracking-widest uppercase leading-none mt-1 block">Agencia Local</span>
+                </div>
+            </div>
+            
+            <div class="pointer-events-auto flex gap-2">
+                <a href="https://wa.me/573122884566" target="_blank" class="w-9 h-9 rounded-full bg-waGreen/90 flex items-center justify-center text-white text-lg shadow-lg backdrop-blur-sm active:scale-95 transition-transform">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="relative z-20 px-6 max-w-md mx-auto flex flex-col items-center justify-center h-full pt-20">
+            
+            <div class="mb-5 bg-black/40 backdrop-blur-md px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest text-white border border-selvaMedium/30">
+                <i class="fa-solid fa-compass animate-spin-slow mr-1.5 text-sunAccent"></i> Anfitriones Locales
+            </div>
+            
+            <h1 class="text-white text-4xl sm:text-5xl font-normal tracking-wide drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)] mb-6 uppercase leading-tight select-none">
+                Descubre los <br>
+                <span class="font-brocha-fuerte text-sunAccent text-5xl sm:text-6xl inline-block transform -rotate-2 my-2 tracking-normal lowercase first-letter:uppercase">
+                    tesoros
+                </span> <br>
+                de <span class="font-brocha-fuerte tracking-normal">Norcasia</span>
+            </h1>
+            
+            <p class="text-gray-200 text-xs font-semibold tracking-widest mb-10 bg-selvaDark/60 border border-white/10 px-5 py-2 rounded-full backdrop-blur-sm inline-block uppercase">
+                Asociación Más Travel • NIT: 902016482-9
+            </p>
+            
+            <a href="#selector-planes" class="inline-block bg-sunAccent hover:bg-[#cc932e] text-selvaDark font-black px-10 py-4 rounded-full shadow-[0_10px_20px_rgba(0,0,0,0.4)] transform transition-all duration-300 hover:-translate-y-1 active:scale-95 uppercase text-xs tracking-widest">
+                Explorar Rutas
+            </a>
+        </div>
+
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center gap-2 pointer-events-none">
+            <span class="font-brocha-fluida text-lg text-sunAccent tracking-wide drop-shadow-md">Desliza para viajar</span>
+            <div class="animate-bounce bg-selvaMedium/80 p-2 rounded-full backdrop-blur-md border border-white/10 shadow-lg">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <section id="selector-planes" class="pt-16 pb-10 px-4 max-w-md mx-auto text-center relative z-20 bg-selvaDark">
+        <h2 class="text-xl font-bold uppercase tracking-wider text-sunAccent mb-2">¿De cuántos días es tu aventura?</h2>
+        <p class="text-gray-400 text-xs mb-6">Elige la duración de tu viaje para trazar tu mapa de ruta interactivo</p>
+        
+        <div class="grid grid-cols-3 gap-2 bg-black/40 p-1.5 rounded-full border border-selvaMedium/30">
+            <button onclick="switchTab('1dia')" id="btn-1dia" class="tab-btn py-2.5 text-xs font-bold uppercase tracking-wider rounded-full transition-all duration-300 bg-sunAccent text-selvaDark">1 Día</button>
+            <button onclick="switchTab('2dias')" id="btn-2dias" class="tab-btn py-2.5 text-xs font-bold uppercase tracking-wider rounded-full transition-all duration-300 text-gray-400 hover:text-white">2 Días</button>
+            <button onclick="switchTab('3dias')" id="btn-3dias" class="tab-btn py-2.5 text-xs font-bold uppercase tracking-wider rounded-full transition-all duration-300 text-gray-400 hover:text-white">3 Días</button>
+        </div>
+    </section>
+
+    <main class="relative pb-24 px-4 max-w-md mx-auto">
+        
+        <div class="absolute left-8 top-0 bottom-0 w-1 timeline-line rounded-full z-0 opacity-70"></div>
+
+        <div id="tab-1dia" class="tab-content space-y-12">
+            
+            <div data-aos="fade-up" class="relative pl-14">
+                <div class="absolute left-6 top-1.5 w-5 h-5 bg-sunAccent border-4 border-selvaDark rounded-full z-10 animate-pulse"></div>
+                <div class="bg-black/30 border border-selvaMedium/20 rounded-2xl p-5 backdrop-blur-sm">
+                    <span class="text-[10px] bg-selvaMedium text-white px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Pasadía Local</span>
+                    <h3 class="text-lg font-bold text-white mt-1">Pasadía Embalse Amaní</h3>
+                    <p class="text-gray-400 text-xs mt-1"><i class="fa-solid fa-location-dot text-red-500 mr-1"></i>Punto de encuentro: Norcasia, Caldas</p>
+                    
+                    <div class="mt-4 space-y-2 border-t border-b border-gray-800 py-3">
+                        <p class="text-xs text-gray-300"><span class="font-bold text-rioBlue"><i class="fa-solid fa-circle-check mr-1.5"></i>Incluye:</span> Almuerzo, refrigerio, transporte fluvial con chaleco salvavidas, pólizas y acompañamiento.</p>
+                        <p class="text-xs text-gray-300"><span class="font-bold text-selvaMedium"><i class="fa-solid fa-route mr-1.5"></i>Recorrido:</span> Presa Pantágoras, Cascada Filandia, Cascada Sasaima, Cascada Campo Alegre y Río Moro.</p>
+                    </div>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <p class="text-[10px] uppercase text-gray-400 tracking-wider">Por Persona</p>
+                            <p class="text-xl font-black text-sunAccent">$190.000 <span class="text-xs font-normal text-gray-400">COP</span></p>
+                        </div>
+                        <a href="https://wa.me/573122884566?text=Hola%20M%C3%A1s%20Travel,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20Pasad%C3%ADa%20Embalse%20Aman%C3%AD" target="_blank" class="bg-waGreen hover:bg-emerald-600 text-selvaDark font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-xl flex items-center gap-1.5 transition-all active:scale-95">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Reservar 
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" class="relative pl-14">
+                <div class="absolute left-6 top-1.5 w-5 h-5 bg-rioBlue border-4 border-selvaDark rounded-full z-10"></div>
+                <div class="bg-black/30 border border-selvaMedium/20 rounded-2xl p-5 backdrop-blur-sm">
+                    <span class="text-[10px] bg-rioBlue text-white px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Aventura e Hidratación</span>
+                    <h3 class="text-lg font-bold text-white mt-1">Pasadía Río La Miel</h3>
+                    <p class="text-gray-400 text-xs mt-1"><i class="fa-solid fa-location-dot text-red-500 mr-1"></i>Punto de encuentro: Norcasia, Caldas</p>
+                    
+                    <div class="mt-4 space-y-2 border-t border-b border-gray-800 py-3">
+                        <p class="text-xs text-gray-300"><span class="font-bold text-rioBlue"><i class="fa-solid fa-circle-check mr-1.5"></i>Incluye:</span> Almuerzo tipo fiambre, hidratación, transporte terrestre y fluvial, chaleco salvavidas, pólizas y guía.</p>
+                        <p class="text-xs text-gray-300"><span class="font-bold text-sunAccent"><i class="fa-solid fa-star mr-1.5"></i>Actividad Reina:</span> Body Rafting.</p>
+                    </div>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <p class="text-[10px] uppercase text-gray-400 tracking-wider">Por Persona</p>
+                            <p class="text-xl font-black text-sunAccent">$160.000 <span class="text-xs font-normal text-gray-400">COP</span></p>
+                        </div>
+                        <a href="https://wa.me/573122884566?text=Hola%20M%C3%A1s%20Travel,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20Pasad%C3%ADa%20R%C3%ADo%20La%20Miel" target="_blank" class="bg-waGreen hover:bg-emerald-600 text-selvaDark font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-xl flex items-center gap-1.5 transition-all active:scale-95">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Reservar 
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" class="relative pl-14">
+                <div class="absolute left-6 top-1.5 w-5 h-5 bg-white border-4 border-selvaDark rounded-full z-10"></div>
+                <div class="bg-black/30 border border-sunAccent/20 rounded-2xl p-5 backdrop-blur-sm shadow-md shadow-sunAccent/5">
+                    <span class="text-[10px] bg-sunAccent text-selvaDark px-2 py-0.5 rounded-full font-bold uppercase tracking-wider"><i class="fa-solid fa-bus mr-1"></i> Desde Bogotá</span>
+                    <h3 class="text-lg font-bold text-white mt-1">Pasadía Embalse - Río Manso</h3>
+                    <p class="text-gray-400 text-xs mt-1"><i class="fa-solid fa-location-dot text-emerald-400 mr-1"></i>Salida internacional: Bogotá Ida y Vuelta</p>
+                    
+                    <div class="mt-4 space-y-2 border-t border-b border-gray-800 py-3">
+                        <p class="text-xs text-gray-300"><span class="font-bold text-rioBlue"><i class="fa-solid fa-circle-check mr-1.5"></i>Incluye:</span> Transporte terrestre integral, transporte fluvial, alimentación full (Desayuno, almuerzo, refrigerio y cena), pólizas y acompañamiento.</p>
+                        <p class="text-xs text-gray-300"><span class="font-bold text-selvaMedium"><i class="fa-solid fa-route mr-1.5"></i>Recorrido:</span> Presa Pantágoras, Cascada Filandia, Cascada Sasaima, Cascada Campo Alegre y Río Manso.</p>
+                    </div>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <p class="text-[10px] uppercase text-gray-400 tracking-wider">Por Persona</p>
+                            <p class="text-xl font-black text-sunAccent">$240.000 <span class="text-xs font-normal text-gray-400">COP</span></p>
+                        </div>
+                        <a href="https://wa.me/573122884566?text=Hola%20M%C3%A1s%20Travel,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20Pasad%C3%ADa%20Bogot%C3%A1%20Embalse%20R%C3%ADo%20Manso" target="_blank" class="bg-waGreen hover:bg-emerald-600 text-selvaDark font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-xl flex items-center gap-1.5 transition-all active:scale-95">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Reservar 
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-2dias" class="tab-content space-y-12 hidden">
+            
+            <div class="relative pl-14">
+                <div class="absolute left-6 top-1.5 w-5 h-5 bg-sunAccent border-4 border-selvaDark rounded-full z-10"></div>
+                <div class="bg-black/30 border border-selvaMedium/20 rounded-2xl p-5 backdrop-blur-sm">
+                    <span class="text-[10px] bg-selvaMedium text-white px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">2 Días y 1 Noche</span>
+                    <h3 class="text-lg font-bold text-white mt-1">Tour Norcasia Tradicional</h3>
+                    <p class="text-gray-400 text-xs mt-1"><i class="fa-solid fa-location-dot text-red-500 mr-1"></i>Punto de encuentro: Norcasia, Caldas</p>
+                    
+                    <div class="mt-4 space-y-2 border-t border-b border-gray-800 py-3">
+                        <p class="text-xs text-gray-300"><span class="font-bold text-sunAccent"><i class="fa-solid fa-calendar-day mr-1.5"></i>Día 1:</span> Embalse Amaní, cascadas y Muro Presa Pantágoras.</p>
+                        <p class="text-xs text-gray-300"><span class="font-bold text-sunAccent"><i class="fa-solid fa-calendar-day mr-1.5"></i>Día 2:</span> Río La Miel (Body Rafting y visita de cascadas).</p>
+                        <p class="text-xs text-gray-300"><span class="font-bold text-rioBlue"><i class="fa-solid fa-circle-check mr-1.5"></i>Incluye:</span> Hospedaje, alimentación (1 desayuno, 2 almuerzos, 2 refrigerios, 1 cena), transporte fluvial, chalecos, acompañamiento y pólizas.</p>
+                    </div>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <p class="text-[10px] uppercase text-gray-400 tracking-wider">Por Persona</p>
+                            <p class="text-xl font-black text-sunAccent">$470.000 <span class="text-xs font-normal text-gray-400">COP</span></p>
+                        </div>
+                        <a href="https://wa.me/573122884566?text=Hola%20M%C3%A1s%20Travel,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20Plan%202%20d%C3%ADas%20Local" target="_blank" class="bg-waGreen hover:bg-emerald-600 text-selvaDark font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-xl flex items-center gap-1.5 transition-all active:scale-95">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Reservar 
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative pl-14">
+                <div class="absolute left-6 top-1.5 w-5 h-5 bg-white border-4 border-selvaDark rounded-full z-10"></div>
+                <div class="bg-black/30 border border-sunAccent/20 rounded-2xl p-5 backdrop-blur-sm">
+                    <span class="text-[10px] bg-sunAccent text-selvaDark px-2 py-0.5 rounded-full font-bold uppercase tracking-wider"><i class="fa-solid fa-bus mr-1"></i> Desde Bogotá</span>
+                    <h3 class="text-lg font-bold text-white mt-1">Ruta Extrema Río Manso</h3>
+                    <p class="text-gray-400 text-xs mt-1"><i class="fa-solid fa-location-dot text-emerald-400 mr-1"></i>Salida desde Bogotá (Ida y vuelta)</p>
+                    
+                    <div class="mt-4 space-y-2 border-t border-b border-gray-800 py-3">
+                        <p class="text-xs text-gray-300"><span class="font-bold text-selvaMedium"><i class="fa-solid fa-route mr-1.5"></i>Recorrido:</span> Muro Pantágoras, Cascadas (Filandia, Sasaima, Campo Alegre), Río Moro y Río Manso + Actividad de Apnea.</p>
+                        <p class="text-xs text-gray-300"><span class="font-bold text-rioBlue"><i class="fa-solid fa-circle-check mr-1.5"></i>Incluye:</span> Transporte terrestre nacional, transporte fluvial, hospedaje, alimentación full (2 desayunos, 2 almuerzos, 2 refrigerios, 2 cenas), pólizas y guías.</p>
+                    </div>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <p class="text-[10px] uppercase text-gray-400 tracking-wider">Por Persona</p>
+                            <p class="text-xl font-black text-sunAccent">$300.000 <span class="text-xs font-normal text-gray-400">COP</span></p>
+                        </div>
+                        <a href="https://wa.me/573122884566?text=Hola%20M%C3%A1s%20Travel,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20Plan%202%20d%C3%ADas%20desde%20Bogot%C3%A1" target="_blank" class="bg-waGreen hover:bg-emerald-600 text-selvaDark font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-xl flex items-center gap-1.5 transition-all active:scale-95">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Reservar 
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-3dias" class="tab-content space-y-12 hidden">
+            
+            <div class="relative pl-14">
+                <div class="absolute left-6 top-1.5 w-5 h-5 bg-sunAccent border-4 border-selvaDark rounded-full z-10 animate-bounce"></div>
+                <div class="bg-gradient-to-br from-black/40 to-selvaMedium/10 border-2 border-sunAccent rounded-2xl p-5 shadow-xl">
+                    <span class="text-[10px] bg-sunAccent text-selvaDark px-2 py-0.5 rounded-full font-bold uppercase tracking-wider"><i class="fa-solid fa-crown mr-1"></i> El Plan Más Completo</span>
+                    <h3 class="text-lg font-bold text-white mt-1">Aventura Total 3 Días</h3>
+                    <p class="text-gray-400 text-xs mt-1"><i class="fa-solid fa-location-dot text-red-500 mr-1"></i>Punto de encuentro: Norcasia, Caldas</p>
+                    
+                    <div class="mt-4 space-y-2 border-t border-b border-gray-800 py-3">
+                        <p class="text-xs text-gray-300"><span class="font-bold text-sunAccent"><i class="fa-solid fa-star mr-1.5"></i>Experiencia:</span> Incluye los 3 Pasadías completos integrados: Embalse Amaní, Río La Miel y Río Manso.</p>
+                        <p class="text-xs text-gray-300"><span class="font-bold text-rioBlue"><i class="fa-solid fa-circle-check mr-1.5"></i>Alojamiento:</span> 2 Noches completas de hospedaje.</p>
+                        <p class="text-xs text-gray-300"><span class="font-bold text-emerald-400"><i class="fa-solid fa-utensils mr-1.5"></i>Alimentación:</span> 3 almuerzos, 3 refrigerios, 2 desayunos y 2 cenas.</p>
+                        <p class="text-xs text-gray-300"><span class="font-bold text-gray-400"><i class="fa-solid fa-shield-halved mr-1.5"></i>Logística:</span> Pólizas completas para los 3 días y acompañamiento permanentemente en todas las actividades.</p>
+                    </div>
+                    <div class="mt-4 flex items-center justify-between">
+                        <div>
+                            <p class="text-[10px] uppercase text-gray-400 tracking-wider">Por Persona</p>
+                            <p class="text-xl font-black text-sunAccent">$580.000 <span class="text-xs font-normal text-gray-400">COP</span></p>
+                        </div>
+                        <a href="https://wa.me/573122884566?text=Hola%20M%C3%A1s%20Travel,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20Plan%20Premium%20de%203%20D%C3%ADas" target="_blank" class="bg-waGreen hover:bg-emerald-600 text-selvaDark font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-xl flex items-center gap-1.5 transition-all active:scale-95">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Reservar 
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-black/60 border-t border-selvaMedium/20 pt-12 pb-6 px-4 text-center text-xs text-gray-400 space-y-6">
+        
+        <div class="flex justify-center gap-6 text-xl">
+            <a href="https://www.facebook.com/share/1J4nZVDKHf/" target="_blank" class="hover:text-rioBlue transition-colors"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.tiktok.com/@ms.travel.agencia?_r=1&_t=ZS-96vyj6uK3yS" target="_blank" class="hover:text-white transition-colors"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/573122884566" target="_blank" class="hover:text-waGreen transition-colors"><i class="fa-brands fa-whatsapp"></i></a> 
+        </div>
+
+        <div class="max-w-xs mx-auto border border-gray-800 rounded-xl overflow-hidden bg-selvaDark/40">
+            <details class="group p-3 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between cursor-pointer text-gray-300 font-bold uppercase tracking-wider text-[11px]">
+                    <span>Nuestra Misión y Visión</span>
+                    <span class="transition duration-300 group-open:-rotate-180"><i class="fa-solid fa-chevron-down text-[10px]"></i></span>
+                </summary>
+                <div class="mt-3 text-left space-y-3 border-t border-gray-800 pt-3 text-gray-400 text-[11px] leading-relaxed">
+                    <p><strong class="text-sunAccent">Misión:</strong> En Mas Travel ofrecemos experiencias turísticas enriquecedoras que conecten a las personas con la naturaleza, promoviendo el respeto, la conservación y el turismo responsable.</p>
+                    <p><strong class="text-rioBlue">Visión:</strong> Ser líderes en turismo educativo y sostenible, transformando cada viaje en un espacio de aprendizaje y conciencia ambiental.</p>
+                </div>
+            </details>
+        </div>
+
+        <div class="space-y-1">
+            <p class="font-bold text-gray-300"><i class="fa-solid fa-map-location-dot text-sunAccent mr-1"></i> Oficina Principal</p>
+            <p>Cr 14 16 53 AP 202, Norcasia</p>
+            <p class="text-[11px] text-gray-500">Operación Fluvial: Embalse Amaní - Puerto Moscovita</p>
+        </div>
+
+        <div class="pt-6 border-t border-gray-900 text-[10px] text-gray-600">
+            <p>© 2026 Asociación Más Travel. Todos los derechos reservados.</p>
+            <p>NIT: 902016482-9</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializar animaciones de Scroll
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Lógica del Switcher de Planes (Tabs dinámicos)
+        function switchTab(tabId) {
+            // Ocultar todos los contenidos de las pestañas
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            
+            // Mostrar el contenido de la pestaña seleccionada
+            document.getElementById('tab-' + tabId).classList.remove('hidden');
+            
+            // Resetear estilos de todos los botones
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('bg-sunAccent', 'text-selvaDark', 'shadow-md');
+                btn.classList.add('text-gray-400');
+            });
+            
+            // Aplicar estilo activo al botón presionado
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.classList.remove('text-gray-400');
+            activeBtn.classList.add('bg-sunAccent', 'text-selvaDark', 'shadow-md');
+            
+            // Refrescar AOS para recalcular las posiciones de las animaciones al cambiar de pestaña
+            AOS.refresh();
+        }
+    </script>
+</body>
+</html>
